@@ -7,9 +7,6 @@ WORKDIR /attic
 # 复制配置文件
 COPY server.toml /attic/server.toml
 
-# 创建存储卷目录
-VOLUME /attic/storage
-
 # 暴露端口
 EXPOSE 8080
 
