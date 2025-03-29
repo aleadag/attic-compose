@@ -1,8 +1,4 @@
 listen = "[::]:8080"
-# .env ATTIC_SERVER_TOKEN_HS256_SECRET_BASE64=<openssl rand 64 | base64 -w0>
-
-[database]
-url = "postgres://attic:attic@db:5432/attic_prod"
 
 [storage]
 type = "local"
