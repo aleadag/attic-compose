@@ -1,0 +1,18 @@
+[build]
+builder = "DOCKERFILE"
+dockerfilePath = "Dockerfile"
+
+[deploy]
+numReplicas = 1
+restartPolicyType = "ON_FAILURE"
+
+[service]
+autoStart = true
+
+[scaling]
+min = 1
+max = 1
+
+[variables]
+ATTIC_SERVER_DATABASE_URL = "${{DATABASE_URL}}"
+ATTIC_SERVER_TOKEN_HS256_SECRET_BASE64 = '${{secret(86, "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/")}}'
