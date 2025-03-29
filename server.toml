@@ -1,8 +1,11 @@
 listen = "[::]:8080"
+api-endpoint = "https://attic.tisvc.cc/"
 
 [storage]
 type = "local"
 path = "/attic/storage"
+
+[database]
 
 [chunking]
 nar-size-threshold = 65536
